@@ -37,7 +37,7 @@ print("\n",greeting[::-1])
 txt = "We are the so-called \"Vikings\" from the north."
 
 '''
-\'	Single Quote	tırnak işareti kullanma
+\'	Single Quotetırnak işareti kullanma
 \\	Backslash	
 \n	New Line	
 \r	Carriage Return	
