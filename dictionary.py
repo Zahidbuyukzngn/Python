@@ -1,3 +1,6 @@
+#Sözlükler değiştirilebilir; yani sözlük oluşturulduktan sonra öğeleri değiştirebilir,
+#Ekleyebilir veya kaldırabiliriz.
+
 
 #dictionary tanımlama key-value ilişkisi vardır sola key sağa value
 '''
@@ -40,3 +43,63 @@ print(users['User2']["name"])
 #user2 nin rollerini ekrana yazdırdık,bir uygualam yaparken admin olduğunu belirtmek için kullanabilriiz
 #devamında birde [0] yazsaydım ekrana çıktı=admin olur
 print(users['User2']["roles"])
+
+#aynı değişkene farklı şeyler atadığımızda en son atadığımızı alır
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964,
+  "year": 2020
+}
+print(thisdict)
+
+#string int bool list bir arada kullanılabilir
+thisdict = {
+  "brand": "Ford",
+  "electric": False,
+  "year": 1964,
+  "colors": ["red", "white", "blue"]
+}
+
+#dict() methodu ile dictionari tanımlama
+thisdict = dict(name = "John", age = 36, country = "Norway")
+print(thisdict)
+
+#kısaca list,tuple,set,dict arası farklar
+
+# Liste (List),         sıralı ve değiştirilebilir bir koleksiyondur. Aynı öğelerden birden fazla bulunmasına izin verir.
+# Demet (Tuple),        sıralı ve değiştirilemez bir koleksiyondur. Aynı öğelerden birden fazla bulunmasına izin verir.
+# Küme (Set),           sırasız, değiştirilemez* ve indekslenemez bir koleksiyondur. Aynı öğelerden birden fazla bulunmaz.
+# Sözlük (Dictionary),      sıralı** ve değiştirilebilir bir koleksiyondur. Aynı öğelerden birden fazla bulunmaz.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
