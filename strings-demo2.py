@@ -10,7 +10,7 @@ print(len(course))
 print(website[ :3])
 # 3-website içinden com karakterlerini alınız
 print(website[21:24])
-# 4- course içinden ilk 10 ve son 10 karakteri alınız
+# 4- course içinden ilk 10 ve son 10 karakteri alınız 
 print(course[0:10])
 print(course[-10:])
 
