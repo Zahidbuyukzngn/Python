@@ -88,7 +88,7 @@ rpartition():    String'i üç parçaya böler ve bir demet (tuple) olarak dönd
 rsplit():     String'i belirtilen ayırıcı ile bölerek bir liste döndürür.
 rstrip():     String'in sağ tarafındaki boşlukları kaldırır.
 split():      String'i belirtilen ayırıcı ile bölerek bir liste döndürür.
-splitlines():   Satır sonlarına göre string'i böler ve bir liste döndürür.
+splitlines():  Satır sonlarına göre string'i böler ve bir liste döndürür.
 startswith():    String'in belirtilen değerle başlayıp başlamadığını kontrol eder ve doğruysa True döner.
 strip():      String'in başındaki ve sonundaki boşlukları kaldırır.
 swapcase():    Büyük harfleri küçük harfe, küçük harfleri büyük harfe çevirir.
