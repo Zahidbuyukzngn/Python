@@ -70,3 +70,12 @@ for x in adj:
 #eğer bir sonuç istemiyorsak pass ile pas geçebiliriz
 for x in [0, 1, 2]:
   pass
+
+
+#range ile aralğı belirttik 101 ama 101'i almıyor
+#0 dan 100 e kadar sayıların toplamı
+toplam=0
+for x in range(101):
+  toplam+=x
+
+print(toplam)
