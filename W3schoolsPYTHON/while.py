@@ -34,13 +34,21 @@
 #   print(i)
    
 
-#while içinde ELSE kullanımı
-#Koşul yanlış olduğunda bir mesaj yazdırır
-i = 1
-while i < 6:
-  print(i)
-  i += 1
-else:
-  print("i is no longer less than 6")
+# #while içinde ELSE kullanımı
+# #Koşul yanlış olduğunda bir mesaj yazdırır
+# i = 1
+# while i < 6:
+#   print(i)
+#   i += 1
+# else:
+#   print("i is no longer less than 6")
 
 
+'0\'dan 100e kadar sayıların toplamı' 
+
+x=0
+toplam=0
+while x<=100:
+  toplam+= x
+  x+=1
+  print(toplam)
