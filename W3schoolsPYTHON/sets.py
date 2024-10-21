@@ -1,3 +1,48 @@
+# Setleri kümeler olarak düşünebiliriz.
+
+
+# Sadece özgün değerleri tutan, içerisinde bir eleman var mı yok mu, başka bir setle hangi elemanları farklı gibi işlemleri performanslı bir şekilde yapabileceğimiz bir veri yapısıdır.
+
+
+# Dictionary'ler gibi eleman sorgusu yapmak hızlıdır. Dictionarylerde key-value çift olarak bulunduğu için aynı uzunluktaki bir setten daha fazla yer kaplar.
+
+
+# Setler indexlenemez.
+
+
+# Setler mutable'dır.
+
+#Setin içinde bir elemanı birden çok göremezsiniz.(1,2,3,4,1 setinde çıktı 1,2,3,4 olur)
+
+
+# Difference (fark)
+#fark alma: s1 kümesi ile s2 kümesinin farkı (s1 – s2) veya (s1 \ s2)
+
+# s1 in hangi elemanları s2 den farklıdır.
+#s1.difference(s2)
+
+
+# Symmetric Difference
+# s1'in s2 den farkı ile s2'nin s1 den farkının birleşimi. (s1 \ s2) U (s2 \ s1) - > s1 U s2 - (s1 n s2)
+
+# U -> Birleşim
+# n -> kesişim
+
+
+
+# Subset (Alt küme)
+# s1.issubset(s2), s1'in s2'nin alt kümesi olup olmadığını kontrol eder
+
+
+# Superset (üst küme)
+# s2.issuperset(s3) s2'nin s3'ün üst kümesi olup olmadığını sorgular
+
+
+
+
+
+
+
 #Set öğelerinde ayarlanan öğeler değiştirilemez ancak öğeleri kaldırabilir 
 #ve yeni öğeler ekleyebilirsiniz.
 
