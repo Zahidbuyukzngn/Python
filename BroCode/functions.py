@@ -1,4 +1,4 @@
 def greeting(first_name,last_name,age):
-    print (("hello"+" "+first_name+" "+last_name+" "+age).upper())
+    print (("hello"+" "+first_name+" "+last_name+" "+str(age)).upper())
 
 greeting(first_name="kemal",last_name="ak",age="29")
