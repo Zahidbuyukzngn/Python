@@ -3,7 +3,13 @@
 # copy()		Kümeyi kopyalar.
 # difference()	-	İki veya daha fazla küme arasındaki farkı içeren bir küme döndürür.
 # difference_update()	-=	Bu kümede olup diğer belirtilen kümelerde de bulunan elemanları kaldırır.
-# discard()		         Belirtilen elemanı kümeden kaldırır. (Eleman yoksa hata vermez.)
+
+# discard()		         Belirtilen elemanı kümeden kaldırır. (Eleman yoksa hata vermez.)!!!!!!!!!!!!!!!!
+setTanım={"mehmet","zahid","türktür"}
+setTanım.discard("mehmet")
+print(setTanım)
+print(len(setTanım))
+
 # intersection()	&	    İki kümenin kesişimini içeren bir küme döndürür.
 # intersection_update()	&=	    Bu kümede olup diğer belirtilen kümelerde bulunmayan elemanları kaldırır.
 # isdisjoint()		İki kümenin kesişimi olup olmadığını döndürür.
