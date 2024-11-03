@@ -9,5 +9,8 @@ if hangiısık == "red":
 elif hangiısık == "yellow":
     print("HAZIRLAN!")
 
+elif hangiısık == "green":
+    print("GEÇ!")
+    #GECE 12'DEN SONRA LAMBALAR YANMADIĞI İÇİN ELSE ÇALIŞIR
 else:
-    print("GEÇ")
+    print("DİKKATLİ GEÇ!")
