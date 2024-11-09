@@ -21,17 +21,35 @@
 #     print("Address: "+row[4])
 #     print("-----------------------------")
 
+# import sqlite3
+
+# connection=sqlite3.connect("C:/Users/Zahid/OneDrive/Masaüstü/YAZILIM/Python/enginDemiroğUdemy/chinook.db")
+
+# #or ile başka bir şehiri koşul gösterebiliriz
+# #order by firstname ile sırlamayı adları alfabetik olarak sıralarız
+# #desc ise tam tersini yapar.tersten sıralar.Burda eğer isimleri aynı olan 2 kişi olsaydı 
+# #alfabetik olarak soyadındaki ilk harf en uzak olannı ilk yazdıracaktı
+# cursor=connection.execute("select FirstName,LastName from customers order by FirstName,LastName desc")
+
+# for row in cursor:
+#     print("First Name: " + row[0])
+#     print("Last Name: " + row[1])
+#     print("-----------------------------")
+
+
+#group by ve having
+
 import sqlite3
+
 
 connection=sqlite3.connect("C:/Users/Zahid/OneDrive/Masaüstü/YAZILIM/Python/enginDemiroğUdemy/chinook.db")
 
-#or ile başka bir şehiri koşul gösterebiliriz
-#order by firstname ile sırlamayı adları alfabetik olarak sıralarız
-#desc ise tam tersini yapar.tersten sıralar.Burda eğer isimleri aynı olan 2 kişi olsaydı 
-#alfabetik olarak soyadındaki ilk harf en uzak olannı ilk yazdıracaktı
-cursor=connection.execute("select FirstName,LastName from customers order by FirstName,LastName desc")
+#şehre göre gurupladı(order by her zaman sona yazılır)
+#having count(*)>1 ile ortak şehir sayısı sadece birden daha fazla olanları yazdırdı
+cursor=connection.execute("select city,count(*) from customers group by city having count(*)>1")
 
+#str çevirmezsek hata alırız.sayısal bir değer çıktığı için
 for row in cursor:
-    print("First Name: " + row[0])
-    print("Last Name: " + row[1])
+    print("City: " + row[0])
+    print("Count: " + str(row[1]))
     print("-----------------------------")
