@@ -87,5 +87,19 @@ def insertCustomer():
     connection.commit()
     connection.close()
 
-insertCustomer()
+#insertCustomer()
 #teriminalden cd ile proje dosyasını açmayı unutma yoksa çalışmıyor
+
+"UPDATE"
+def updateCustomer():
+    import sqlite3
+    connection=sqlite3.connect("C:/Users/Zahid/OneDrive/Masaüstü/YAZILIM/Python/enginDemiroğUdemy/chinook.db")
+    
+    #Ankara şehirlerini İstanbul ile değiştirdik.where city ile sadece ankara olanları değiştirdik
+    connection.execute("""update customers set city='İstanbul'
+                       where city='Ankara'""") 
+    
+    connection.commit()
+    connection.close()
+
+updateCustomer()
