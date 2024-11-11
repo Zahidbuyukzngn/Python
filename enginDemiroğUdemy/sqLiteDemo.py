@@ -115,4 +115,24 @@ def deleteCustomer():
     connection.commit()
     connection.close()
 
-deleteCustomer()
+#deleteCustomer()
+
+"JOİN OPERASYONLARI"
+
+def joinOperasyonları():
+    import sqlite3
+    connection=sqlite3.connect("C:/Users/Zahid/OneDrive/Masaüstü/YAZILIM/Python/enginDemiroğUdemy/chinook.db")
+
+#where ile sadece artist adında martin olanları yazdırdım
+    cursor=connection.execute(""" select albums.Title,
+                              artists.name from artists
+                              inner join albums on artists.ArtistId=albums.ArtistId
+                              where artists.Name like '%martin%'
+                              """)
+    
+    for row in cursor:
+        print("Title: "+row[0],"\nArtistName: "+row[1])
+        print("-----------------------------")
+    
+    connection.close()
+joinOperasyonları()
