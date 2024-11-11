@@ -54,18 +54,38 @@
 #     print("Count: " + str(row[1]))
 #     print("-----------------------------")
 
+#SELECT TE LİKE KOMUTU
 
-import sqlite3
-connection=sqlite3.connect("C:/Users/Zahid/OneDrive/Masaüstü/YAZILIM/Python/enginDemiroğUdemy/chinook.db")
+# import sqlite3
+# connection=sqlite3.connect("C:/Users/Zahid/OneDrive/Masaüstü/YAZILIM/Python/enginDemiroğUdemy/chinook.db")
 
-#where FirstName like '%s%' ==İÇİNDE S HARFİ OLAN İSİMLER
-#where FirstName like '%s' ==SONU S HARFİ İLE BİTEN İSİMLER
-#where FirstName like '%sa%' ==İSİMİN İÇİNDE SA OLAN İSİMLER
-#where FirstName like 's%' == S HARFİ İLE BAŞLAYAN İSİMLER
+# #where FirstName like '%s%' ==İÇİNDE S HARFİ OLAN İSİMLER
+# #where FirstName like '%s' ==SONU S HARFİ İLE BİTEN İSİMLER
+# #where FirstName like '%sa%' ==İSİMİN İÇİNDE SA OLAN İSİMLER
+# #where FirstName like 's%' == S HARFİ İLE BAŞLAYAN İSİMLER
 
-cursor=connection.execute("select FirstName,LastName from customers where FirstName like 's%'")
+# cursor=connection.execute("select FirstName,LastName from customers where FirstName like 's%'")
 
-for row in cursor:
-    print("First Name: " + row[0])
-    print("Last Name: " + row[1])
-    print("-----------------------------")
+# for row in cursor:
+#     print("First Name: " + row[0])
+#     print("Last Name: " + row[1])
+#     print("-----------------------------")
+
+#İNSTERT
+def insertCustomer():
+    import sqlite3
+    connection=sqlite3.connect("C:/Users/Zahid/OneDrive/Masaüstü/YAZILIM/Python/enginDemiroğUdemy/chinook.db")
+    #select deki gibi bir değere atamamıza gerek yok execute'yi
+    #ilk önce değerleri verdik hangi değerlerden ekleme yapacağımızı,sonra  values( )le vereceğimiz değerleri belirttik
+    #ayrıca veritabanı email belirtmeyi zorunlu kıldığı için mecbur email belirttik 
+    connection.execute("""insert into customers 
+                       (FirstName,LastName,city,email) 
+                       values('Engin','Demiroğ','Ankara',
+                       'engindemirog@gmail.com')""")
+    #commit() ve close() yapmazsak değişiklikler gitmiyor.
+    #commit() değişiklikleri kaydetmemizi sağlar, close() ise bağlantıyı kapatır.
+    connection.commit()
+    connection.close()
+
+insertCustomer()
+#teriminalden cd ile proje dosyasını açmayı unutma yoksa çalışmıyor
