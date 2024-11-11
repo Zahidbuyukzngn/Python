@@ -37,19 +37,35 @@
 #     print("-----------------------------")
 
 
-#group by ve having
+# #group by ve having
+
+# import sqlite3
+
+
+# connection=sqlite3.connect("C:/Users/Zahid/OneDrive/Masaüstü/YAZILIM/Python/enginDemiroğUdemy/chinook.db")
+
+# #şehre göre gurupladı(order by her zaman sona yazılır)
+# #having count(*)>1 ile ortak şehir sayısı sadece birden daha fazla olanları yazdırdı
+# cursor=connection.execute("select city,count(*) from customers group by city having count(*)>1")
+
+# #str çevirmezsek hata alırız.sayısal bir değer çıktığı için
+# for row in cursor:
+#     print("City: " + row[0])
+#     print("Count: " + str(row[1]))
+#     print("-----------------------------")
+
 
 import sqlite3
-
-
 connection=sqlite3.connect("C:/Users/Zahid/OneDrive/Masaüstü/YAZILIM/Python/enginDemiroğUdemy/chinook.db")
 
-#şehre göre gurupladı(order by her zaman sona yazılır)
-#having count(*)>1 ile ortak şehir sayısı sadece birden daha fazla olanları yazdırdı
-cursor=connection.execute("select city,count(*) from customers group by city having count(*)>1")
+#where FirstName like '%s%' ==İÇİNDE S HARFİ OLAN İSİMLER
+#where FirstName like '%s' ==SONU S HARFİ İLE BİTEN İSİMLER
+#where FirstName like '%sa%' ==İSİMİN İÇİNDE SA OLAN İSİMLER
+#where FirstName like 's%' == S HARFİ İLE BAŞLAYAN İSİMLER
 
-#str çevirmezsek hata alırız.sayısal bir değer çıktığı için
+cursor=connection.execute("select FirstName,LastName from customers where FirstName like 's%'")
+
 for row in cursor:
-    print("City: " + row[0])
-    print("Count: " + str(row[1]))
+    print("First Name: " + row[0])
+    print("Last Name: " + row[1])
     print("-----------------------------")
