@@ -12,7 +12,7 @@
 #     print("-----------------------------")
 
 
-# # * ile tümünü aldık customers'ın.Şehri sadece stuttgart olan kişileri yazdırdım
+# * ile tümünü aldık customers'ın.Şehri sadece stuttgart olan kişileri yazdırdım
 # cursor2=connection.execute("select * from customers where city='Stuttgart'")
 
 # for row in cursor2:
@@ -37,8 +37,7 @@
 #     print("-----------------------------")
 
 
-# #group by ve having
-
+"group by ve having"
 # import sqlite3
 
 
@@ -54,7 +53,7 @@
 #     print("Count: " + str(row[1]))
 #     print("-----------------------------")
 
-#SELECT TE LİKE KOMUTU
+"SELECT TE LİKE KOMUTU"
 
 # import sqlite3
 # connection=sqlite3.connect("C:/Users/Zahid/OneDrive/Masaüstü/YAZILIM/Python/enginDemiroğUdemy/chinook.db")
@@ -71,35 +70,49 @@
 #     print("Last Name: " + row[1])
 #     print("-----------------------------")
 
-#İNSTERT
-def insertCustomer():
-    import sqlite3
-    connection=sqlite3.connect("C:/Users/Zahid/OneDrive/Masaüstü/YAZILIM/Python/enginDemiroğUdemy/chinook.db")
-    #select deki gibi bir değere atamamıza gerek yok execute'yi
-    #ilk önce değerleri verdik hangi değerlerden ekleme yapacağımızı,sonra  values( )le vereceğimiz değerleri belirttik
-    #ayrıca veritabanı email belirtmeyi zorunlu kıldığı için mecbur email belirttik 
-    connection.execute("""insert into customers 
-                       (FirstName,LastName,city,email) 
-                       values('Engin','Demiroğ','Ankara',
-                       'engindemirog@gmail.com')""")
-    #commit() ve close() yapmazsak değişiklikler gitmiyor.
-    #commit() değişiklikleri kaydetmemizi sağlar, close() ise bağlantıyı kapatır.
-    connection.commit()
-    connection.close()
+"İNSTERT"
+# def insertCustomer():
+#     import sqlite3
+#     connection=sqlite3.connect("C:/Users/Zahid/OneDrive/Masaüstü/YAZILIM/Python/enginDemiroğUdemy/chinook.db")
+#     #select deki gibi bir değere atamamıza gerek yok execute'yi
+#     #ilk önce değerleri verdik hangi değerlerden ekleme yapacağımızı,sonra  values( )le vereceğimiz değerleri belirttik
+#     #ayrıca veritabanı email belirtmeyi zorunlu kıldığı için mecbur email belirttik 
+#     connection.execute("""insert into customers 
+#                        (FirstName,LastName,city,email) 
+#                        values('Engin','Demiroğ','Ankara',
+#                        'engindemirog@gmail.com')""")
+#     #commit() ve close() yapmazsak değişiklikler gitmiyor.
+#     #commit() değişiklikleri kaydetmemizi sağlar, close() ise bağlantıyı kapatır.
+#     connection.commit()
+#     connection.close()
 
 #insertCustomer()
 #teriminalden cd ile proje dosyasını açmayı unutma yoksa çalışmıyor
 
 "UPDATE"
-def updateCustomer():
+# def updateCustomer():
+#     import sqlite3
+#     connection=sqlite3.connect("C:/Users/Zahid/OneDrive/Masaüstü/YAZILIM/Python/enginDemiroğUdemy/chinook.db")
+    
+#     #Ankara şehirlerini İstanbul ile değiştirdik.where city ile sadece ankara olanları değiştirdik
+#     connection.execute("""update customers set city='İstanbul'
+#                        where city='Ankara'""") 
+#     #soyadı demiroğdan büyükzengine dönüştürdük
+#     connection.execute("""update customers set LastName='Büyükzengin'
+#                        where LastName='Demiroğ'""")
+#     connection.commit()
+#     connection.close()
+
+# updateCustomer()
+
+def deleteCustomer():
     import sqlite3
     connection=sqlite3.connect("C:/Users/Zahid/OneDrive/Masaüstü/YAZILIM/Python/enginDemiroğUdemy/chinook.db")
     
-    #Ankara şehirlerini İstanbul ile değiştirdik.where city ile sadece ankara olanları değiştirdik
-    connection.execute("""update customers set city='İstanbul'
-                       where city='Ankara'""") 
+    #İstanbul'daki müşterileri veya london daki müşterileri sildik
+    connection.execute("""delete from customers where city='İstanbul' or country='London'""")
     
     connection.commit()
     connection.close()
 
-updateCustomer()
+deleteCustomer()
