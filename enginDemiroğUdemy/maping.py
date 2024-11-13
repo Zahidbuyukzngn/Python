@@ -1,4 +1,4 @@
-sayılar=[1,2,3,4,5]
+sayılar=[1,2,3,4,5,]
 
 
 #'map' fonksiyonu ve 'lambda' ifadesi kullanılarak 'sayılar' listesindeki her elemanın karesi hesaplanıyor.
@@ -24,3 +24,15 @@ print(sayılarınKaresi)
 print(sayılarFilter)
 
 
+"reduce"
+from functools import reduce
+
+#sayılar listesindeki sayıları tek tek topladı
+sayılarReduce=reduce(lambda x,y:x+y,sayılar)
+
+#sayılar listesindeki sayıları tek tek çarptı baştan başlayıp çarpa çarpa devam ediyor
+sayılarReduce2=reduce(lambda x,y:x*y,sayılar)
+
+
+print(sayılarReduce)
+print(sayılarReduce2)
