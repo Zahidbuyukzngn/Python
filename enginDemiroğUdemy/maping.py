@@ -6,11 +6,21 @@ sayılar=[1,2,3,4,5]
 #'map' fonksiyonu, lambda fonksiyonunu listedeki her elemana uygulayıp sonuçları yeni bir listeye dönüştürür.
 sayılarınKaresi=list(map(lambda sayı:sayı**2,sayılar))
 
-#YUKARDAKİ MAP YERİNE BUDA YAPILABİLİR,aynı sonucu verir
-sayılarınKaresi2=[]
-for sayi in sayılar:
-    sayılarınKaresi2.append(sayi**2)
+
+
+# #YUKARDAKİ MAP YERİNE BUDA YAPILABİLİR,aynı sonucu verir
+# sayılarınKaresi2=[]
+# for sayi in sayılar:
+#     sayılarınKaresi2.append(sayi**2)
+
+"FİLTER"
+#sadece 2 den büyük sayıları filtrelemiş olduk
+#özellikle veri analizinde faydası oluyormuş
+sayılarFilter=list(filter(lambda sayi:sayi>2,sayılar))
 
 
 print(sayılarınKaresi)
-print(sayılarınKaresi2)
+#print(sayılarınKaresi2)
+print(sayılarFilter)
+
+
