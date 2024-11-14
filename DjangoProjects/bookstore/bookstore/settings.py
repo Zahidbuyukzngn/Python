@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'books.apps.BooksConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -103,9 +104,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+#ingilizceyi türkçeeye çevirdik
+LANGUAGE_CODE = 'tr-TR'
 
-TIME_ZONE = 'UTC'
+#zaman dilimini istanbula ayarldır UTC idi
+TIME_ZONE = 'Europa\Istanbul'
 
 USE_I18N = True
 
