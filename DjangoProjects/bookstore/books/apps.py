@@ -1,6 +1,5 @@
 from django.apps import AppConfig
 
-
+#burdaki class ismini settingsteki ınstalled_apss e yazıyoruz
 class BooksConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
     name = 'books'
