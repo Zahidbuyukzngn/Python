@@ -6,7 +6,7 @@ def submit():
     print("the temparature is: "+str(scale.get())+" degrees C")
 
 scale= Scale(window,
-             from_=1000,
+             from_=100,
              to=0,
              length=600,
              orient=VERTICAL,
