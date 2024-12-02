@@ -4,6 +4,15 @@ def submit():
     print("You have ordered: ")
     print(listbox.get(listbox.curselection()))
 
+def add():
+    listbox.insert(listbox.size(),entrybox.get())
+    listbox.config(height=listbox.size())
+    
+def delete():
+    listbox.delete(listbox.curselection())
+    listbox.config(height=listbox.size())
+
+
 
 window=Tk()
 
@@ -23,10 +32,30 @@ listbox.insert(5,"Soup")
 
 listbox.config(height=listbox.size())
 
-button=Button(window,
-              text="submit",
-              command=submit)
 
-button.pack()
+
+entrybox=Entry(window,
+              )
+entrybox.pack()
+
+
+
+submitbutton=Button(window,
+              text="SUBMİT",
+              command=submit)
+submitbutton.pack()
+
+
+
+addbutton=Button(window,
+                 text="ADD",
+                 command=add)
+addbutton.pack()
+
+
+deletebutton=Button(window,
+                 text="DELETE",
+                 command=delete)
+deletebutton.pack()
 
 window.mainloop()
