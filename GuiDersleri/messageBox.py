@@ -23,8 +23,17 @@ def click():
     #     print("you retried a thing!")
     # else:
     #     print("you canceled a thing!")
-
-    
+    "evet veya hayır cevabı almak için kullanıcıya sorduk"
+    # if messagebox.askyesno(title="ask yes or no",message="do you like etliekmek??"):
+    #     print("yes, you like etliekmek")
+    # else:
+    #     print("no, you don't like etliekmek")
+    "turta sever misin sorusu ile kullanıcıdan evet hayır girdisi aldık"
+    answer=messagebox.askquestion(title="ASK QUESTION",message="do you like pie!")
+    if answer=="yes":
+        print("you like pie!")
+    else:
+        print("you don't like pie!")
 button=Button(window,command=click,text="Click me")
 button.pack()
 
