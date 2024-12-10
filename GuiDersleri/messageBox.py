@@ -28,13 +28,25 @@ def click():
     #     print("yes, you like etliekmek")
     # else:
     #     print("no, you don't like etliekmek")
+
     "turta sever misin sorusu ile kullanıcıdan evet hayır girdisi aldık"
-    answer=messagebox.askquestion(title="ASK QUESTION",message="do you like pie!")
-    if answer=="yes":
-        print("you like pie!")
+    # answer=messagebox.askquestion(title="ASK QUESTION",message="do you like pie!")
+    # if answer=="yes":
+    #     print("you like pie!")
+    # else:
+    #     print("you don't like pie!")
+
+    "evet veya hayır veya iptal cevabı almak için kullanıcıya sorduk"
+    "icon ile mesajımızın yanındaki ikonu değiştirebiliriz"
+    answer=messagebox.askyesnocancel(title="yes no cancel",message="do you like to coding???",icon="warning")
+    if answer==True:
+        print("yes, you like coding!")
+    elif answer==False:
+        print("no, you don't like coding!")
     else:
-        print("you don't like pie!")
+        print("you have dodged the question! ")
 button=Button(window,command=click,text="Click me")
+
 button.pack()
 
 window.mainloop()
