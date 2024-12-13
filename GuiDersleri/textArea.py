@@ -7,7 +7,14 @@ def submit():
     
 window=Tk()
     
-text=Text(window)
+text=Text(window,
+          font=("Ink Free",25),
+          bg="light yellow",
+          width=30,
+          height=15,
+          padx=30,
+          pady=30,
+          fg="purple")
 text.pack()
 
 button=Button(window,text="Submit",command=submit)
